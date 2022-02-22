@@ -1,0 +1,18 @@
+ALGORITHM insertsort
+VAR
+array:ARRAY_of INTEGER;
+temp ,i,j:INTEGER;
+
+BEGIN
+FOR i FROM 1 TO array.length-1  DO
+temp:=array[i];
+j:=i-1
+
+WHILE (j>=0 and array[j]>temp) DO
+    array[j+1]:=array[j]
+    j:=j-1
+    
+END_WHILE
+array[j+1]:=temp
+END_FOR
+END
